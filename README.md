@@ -10,7 +10,7 @@ Pictures used (some of them):
 
  - field from which the snake starts; <img align="left" width="40" height="37" src="/project_files/pictures/0minesAndStart.png">
         
- - a field where the food is found. <img align="left" width="40" height="37" src="/project_files/pictures/food.png">
+ - field where the food is found. <img align="left" width="40" height="37" src="/project_files/pictures/food.png">
 
 Each of the fields can be found in the following three colors: gray, orange, and green.
 Meaning of each color:

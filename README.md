@@ -2,16 +2,15 @@ MineSnake - description
 
 Minesnake is a project designed by three promising R students at the Faculty of Mathematics who are so modest that they had to advertise themselves at the very beginning of this description. The project is a combination of two still popular games, Minesweeper and Snake. We sincerely hope that there have been no such attempts to merge these two games so far.
 
-Buttons used (some of them):
+Pictures used (some of them):
 
- - field where the mine was located;
+ - field where the mine was located; <img align="left" width="40" height="37" src="/project_files/pictures/3mines.png">
 
 
- - field from which the snake starts;
+ - field from which the snake starts; <img align="left" width="40" height="37" src="/project_files/pictures/0minesAndStart.png">
 
         
- - a field where the food is found.
-
+ - a field where the food is found. <img align="left" width="40" height="37" src="/project_files/pictures/food.png">
 
 Each of the fields can be found in the following three colors: gray, orange, and green.
 Meaning of each color:

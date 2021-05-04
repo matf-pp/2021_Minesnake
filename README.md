@@ -4,7 +4,7 @@ Minesnake is a project designed by three promising R students at the Faculty of 
 
 Pictures used (some of them):
 
- - field where the mine was located; <img align="left" width="40" height="37" src="/project_files/pictures/3mines.png">
+ - field where the mine was located; <img align="left" width="40" height="37" src="/project_files/pictures/1mine.png">
 
  - field where the snake is located; <img align="left" width="40" height="37" src="/project_files/pictures/snake.png">
 

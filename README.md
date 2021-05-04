@@ -30,8 +30,8 @@ Some of the packages used are: System.Collection.Generic, System.Drawing, System
 
 Authors and their contact adresses:
 
--Milica Karličić mr18101@alas.matf.bg.ac.rs
+-Milica Karličić, mr18101@alas.matf.bg.ac.rs
 
--Branko Cvetković mr18262@alas.matf.bg.ac.rs
+-Branko Cvetković, mr18262@alas.matf.bg.ac.rs
 
--Petar Tešić mr18002@alas.matf.bg.ac.rs 
+-Petar Tešić, mr18002@alas.matf.bg.ac.rs 

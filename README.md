@@ -1,4 +1,4 @@
-MineSnake - description
+<h1 style="font-size:60px;"> MineSnake - description </h1>
 
 Minesnake is a project designed by three promising R students at the Faculty of Mathematics who are so modest that they had to advertise themselves at the very beginning of this description. The project is a combination of two still popular games, Minesweeper and Snake. We sincerely hope that there have been no such attempts to merge these two games so far.
 

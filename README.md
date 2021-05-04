@@ -6,9 +6,9 @@ Pictures used (some of them):
 
  - field where the mine was located; <img align="left" width="40" height="37" src="/project_files/pictures/3mines.png">
 
+ - field where the snake is located; <img align="left" width="40" height="37" src="/project_files/pictures/snake.png">
 
  - field from which the snake starts; <img align="left" width="40" height="37" src="/project_files/pictures/0minesAndStart.png">
-
         
  - a field where the food is found. <img align="left" width="40" height="37" src="/project_files/pictures/food.png">
 

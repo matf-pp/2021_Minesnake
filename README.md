@@ -28,7 +28,7 @@ The original idea was for the project to be done in C++, and almost entire code 
 An executable file was created for Microsoft Windows operating system. The project can be started using Windows forms in Visual Studio.
 Some of the packages used are: System.Collection.Generic, System.Drawing, System.Text, System.Linq, System.Threading.Tasks, System.Windows.Forms.
 
-Authors and their contact adresses:
+Authors and their contact adresses: 
 
 ~Milica Karličić, mr18101@alas.matf.bg.ac.rs
 

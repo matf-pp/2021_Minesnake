@@ -21,8 +21,16 @@ Gray - unmarked fields;
 Orange - fields where food can be found;
 
 Green - fields where the snake is located.
+<p align="center">
+<img width="500" height="400" src="/project_files/pictures/photo1.png"> 
+</p>
+  <center> On the picture above you can see our front page </center>
+  
+-Before you run a level, you need to enter your name;
 
-<img align="center" width="500" height="400" src="/project_files/pictures/photo1.png">
+-On the rang list button, you will get a list of top five players;
+
+-Click help, for a game introduction.
 
 At the beginning of each level, the starting position and the position where the food is located are set. The snake moves towards the food. The players' task is to clear the snake's trajectory of potential mines.
 

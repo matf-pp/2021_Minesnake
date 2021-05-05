@@ -13,10 +13,25 @@ Pictures used (some of them):
  - field where the food is found. <img align="left" width="40" height="37" src="/project_files/pictures/food.png">
 
 Each of the fields can be found in the following three colors: gray, orange, and green.
+
 Meaning of each color:
+
 Gray - unmarked fields;
+
 Orange - fields where food can be found;
+
 Green - fields where the snake is located.
+
+<p align="center"> <h1 style="font-size:30px;"> On the picture below you can see our front page </h1> </p>
+<p align="left">
+<img width="800" height="500" src="/project_files/pictures/photo1.png"> 
+ </p>
+  
+-Before you run a level, you need to enter your name;
+
+-On the rang list button, you will get a list of top five players;
+
+-Click help, for a game introduction.
 
 At the beginning of each level, the starting position and the position where the food is located are set. The snake moves towards the food. The players' task is to clear the snake's trajectory of potential mines.
 

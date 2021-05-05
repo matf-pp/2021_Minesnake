@@ -142,7 +142,7 @@ namespace MineSnake
 
 			List<int> obstacleX = new List<int>() { 5, 7 };
 			List<int> obstacleY = new List<int>() { 5, 5 };
-			game.prepare(10, 10, 3, 0, 3, obstacleX, obstacleY, 8, 15, pBoxes, visited);
+			game.prepare(10, 10, 3, 0, 3, obstacleX, obstacleY, 13, 16, pBoxes, visited);
 			game.repaint();
 			game.play(1000);
 		}

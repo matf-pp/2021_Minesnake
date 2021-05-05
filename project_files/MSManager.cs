@@ -386,6 +386,8 @@ namespace MineSnake
                 }
             }
 
+            grid.removeProperty(startX, startY, MSTileProperty.MINE);
+
             ai.setGrid(grid);
             ai.setSnake(snake);
         }

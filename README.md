@@ -41,7 +41,7 @@ The function which finds snake’s trajectory is based on well-known graph BFS a
 
 The original idea was for the project to be done in C++, and almost entire code was typed in it, but we came across an error that we managed to fix by switching to C#.
 
-An executable file was created for Microsoft Windows operating system. The project can be started using Windows forms in Visual Studio.
+An executable file was created for Microsoft Windows operating system. The project can be started using Windows forms in Visual Studio. An executable file can be found in releases section within zipped file Setup. It has to be done because of the usage of external files.
 Some of the packages used are: System.Collection.Generic, System.Drawing, System.Text, System.Linq, System.Threading.Tasks, System.Windows.Forms.
 
 

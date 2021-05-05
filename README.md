@@ -21,10 +21,11 @@ Gray - unmarked fields;
 Orange - fields where food can be found;
 
 Green - fields where the snake is located.
+
+<p align="center"> <h1 style="font-size:30px;"> On the picture below you can see our front page </h1> </p>
 <p align="center">
 <img width="800" height="500" src="/project_files/pictures/photo1.png"> 
-</p>
-  <p align="center"> <h1 style="font-size:30px;"> On the picture above you can see our front page </h1> </p>
+ </p>
   
 -Before you run a level, you need to enter your name;
 

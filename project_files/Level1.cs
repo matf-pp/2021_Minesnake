@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MineSnake
 {
@@ -148,29 +149,34 @@ namespace MineSnake
 		}
 		private void updateFileContent()
         {
-			string[] lines = System.IO.File.ReadAllLines("players.txt");
-			List<string> fileContent = new List<string>();
-			List<Tuple<string, int>> sortedList = new List<Tuple<string, int>>();
-			foreach (string line in lines)
+			try
 			{
-				string[] tmp = line.Split(' ');
-				sortedList.Add(new Tuple<string, int>(tmp[0], int.Parse(tmp[1])));
-			}
-			int points = game.getPoints();
-			sortedList.Add(new Tuple<string, int>(name, points));
+				string[] lines = File.ReadAllLines("players.txt");
+				
+				List<string> fileContent = new List<string>();
+				List<Tuple<string, int>> sortedList = new List<Tuple<string, int>>();
+				foreach (string line in lines)
+				{
+					string[] tmp = line.Split(' ');
+					sortedList.Add(new Tuple<string, int>(tmp[0], int.Parse(tmp[1])));
+				}
+				int points = game.getPoints();
+				sortedList.Add(new Tuple<string, int>(name, points));
 
-			sortedList.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+				sortedList.Sort((a, b) => b.Item2.CompareTo(a.Item2));
 
-			int j = 0;
-			foreach (Tuple<string, int> tmp in sortedList)
-			{
-				if (j == 5)
-					break;
-				fileContent.Add(tmp.Item1 + " " + tmp.Item2.ToString());
-				j++;
-			}
-
-			System.IO.File.WriteAllLines("players.txt", fileContent);
+				int j = 0;
+				foreach (Tuple<string, int> tmp in sortedList)
+				{
+					if (j == 5)
+						break;
+					fileContent.Add(tmp.Item1 + " " + tmp.Item2.ToString());
+					j++;
+				}
+				File.WriteAllLines("players.txt", fileContent);
+			} catch(Exception) {
+				MessageBox.Show("Unable to write to file");
+            }
 		}
 
         private void button2_Click(object sender, EventArgs e)

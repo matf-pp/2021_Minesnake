@@ -22,11 +22,13 @@ Orange - fields where food can be found;
 
 Green - fields where the snake is located.
 
-<p align="center"> <h1 style="font-size:30px;"> On the picture below you can see our front page </h1> </p>
+<p align="center"> <h1 style="font-size:30px;"> Application instructions and technical details </h1> </p>
 <p align="left">
 <img width="800" height="500" src="/project_files/pictures/photo1.png"> 
  </p>
-  
+ 
+ On the picture above you can see our front page.
+ 
 -Before you run a level, you need to enter your name;
 
 -On the rang list button, you will get a list of top five players;
@@ -39,8 +41,11 @@ The function which finds snake’s trajectory is based on well-known graph BFS a
 
 The original idea was for the project to be done in C++, and almost entire code was typed in it, but we came across an error that we managed to fix by switching to C#.
 
-An executable file was created for Microsoft Windows operating system. The project can be started using Windows forms in Visual Studio.
+An executable file was created for Microsoft Windows operating system. The project can be started using Windows forms in Visual Studio. An executable file can be found in releases section within zipped file Setup. It has to be done because of the usage of external files.
+Within the project_file you can also find our first attempt to make this aplication in C++.
 Some of the packages used are: System.Collection.Generic, System.Drawing, System.Text, System.Linq, System.Threading.Tasks, System.Windows.Forms.
+
+
 
 Authors and their contact adresses: 
 

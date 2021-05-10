@@ -85,11 +85,6 @@ namespace MineSnake
                             throw new MSException("SNAKE_IN_INVALID_POSITION");
                         }
 
-                        if (grid.isOf(hcx + 1, hcy, MSTileProperty.MINE))
-                        {
-                            throw new MSException("SNAKE_ON_A_MINE");
-                        }
-
                         if (places.Count() == length)
                         {
                             int j = places.Count() - 1;
@@ -105,11 +100,6 @@ namespace MineSnake
                         if (!grid.isIncluded(hcx - 1, hcy) || grid.isOf(hcx - 1, hcy, MSTileProperty.OBSTACLE) || grid.isOf(hcx - 1, hcy, MSTileProperty.SNAKE))
                         {
                             throw new MSException("SNAKE_IN_INVALID_POSITION");
-                        }
-
-                        if (grid.isOf(hcx - 1, hcy, MSTileProperty.MINE))
-                        {
-                            throw new MSException("SNAKE_ON_A_MINE");
                         }
 
                         if (places.Count() == length)
@@ -129,11 +119,6 @@ namespace MineSnake
                             throw new MSException("SNAKE_IN_INVALID_POSITION");
                         }
 
-                        if (grid.isOf(hcx, hcy - 1, MSTileProperty.MINE))
-                        {
-                            throw new MSException("SNAKE_ON_A_MINE");
-                        }
-
                         if (places.Count() == length)
                         {
                             int j = places.Count() - 1;
@@ -149,11 +134,6 @@ namespace MineSnake
                         if (!grid.isIncluded(hcx, hcy + 1) || grid.isOf(hcx, hcy + 1, MSTileProperty.OBSTACLE) || grid.isOf(hcx, hcy + 1, MSTileProperty.SNAKE))
                         {
                             throw new MSException("SNAKE_IN_INVALID_POSITION");
-                        }
-
-                        if (grid.isOf(hcx, hcy + 1, MSTileProperty.MINE))
-                        {
-                            throw new MSException("SNAKE_ON_A_MINE");
                         }
 
                         if (places.Count() == length)
@@ -173,6 +153,13 @@ namespace MineSnake
             }
 
             Tuple<int, int> headCoords = places[0];
+
+            if (grid.isOf(headCoords.Item1, headCoords.Item2, MSTileProperty.MINE))
+            {
+                throw new MSException("SNAKE_ON_A_MINE");
+
+                return;
+            }
 
             if (grid.isOf(headCoords.Item1, headCoords.Item2, MSTileProperty.FOOD))
             {

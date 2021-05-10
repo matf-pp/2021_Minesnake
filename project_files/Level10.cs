@@ -3884,7 +3884,7 @@ namespace MineSnake
 			}
 		}
 
-		private void label2_MouseDown(object sender, MouseEventArgs e)
+		private void pictureBox156_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
 			{

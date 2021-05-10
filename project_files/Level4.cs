@@ -174,16 +174,6 @@ namespace MineSnake
 			System.IO.File.WriteAllLines("players.txt", fileContent);
 		}
 
-		private void pictureBox91_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void button2_Click(object sender, EventArgs e)
 		{
 			var result = MessageBox.Show("Are you sure you want to exit game?", "", MessageBoxButtons.YesNo,
@@ -307,11 +297,6 @@ namespace MineSnake
 			}
 		}
 
-		private void pictureBox5_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -379,11 +364,6 @@ namespace MineSnake
 			{
 				MessageBox.Show("YOU LOSE :("); updateFileContent(); 
 			}
-		}
-
-		private void pictureBox8_Click(object sender, EventArgs e)
-		{
-
 		}
 
 		private void pictureBox8_MouseDown(object sender, MouseEventArgs e)

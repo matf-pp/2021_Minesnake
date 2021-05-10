@@ -173,16 +173,6 @@ namespace MineSnake
 			System.IO.File.WriteAllLines("players.txt", fileContent);
 		}
 
-        private void pictureBox91_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
 			var result = MessageBox.Show("Are you sure you want to exit game?", "", MessageBoxButtons.YesNo,

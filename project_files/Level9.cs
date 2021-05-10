@@ -3371,36 +3371,6 @@ namespace MineSnake
 			}
 		}
 
-		private void pictureBox135_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox136_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox137_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox138_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox139_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox140_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void pictureBox135_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -3884,7 +3854,7 @@ namespace MineSnake
 			}
 		}
 
-		private void label2_MouseDown(object sender, MouseEventArgs e)
+		private void pictureBox156_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
 			{

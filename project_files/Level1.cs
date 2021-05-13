@@ -17,11 +17,13 @@ namespace MineSnake
         private PictureBox[] pBoxes = new PictureBox[100];
 		private bool[] visited = new bool[100];
 		private MSManager game = new MSManager();
+        Form1 form;
 
-		public Level1(string name)
+		public Level1(string name, Form1 f)
         {
             InitializeComponent();
             this.name = name;
+            form = f;
         }
 
 		private void Level1_Load(object sender, EventArgs e)
@@ -178,16 +180,6 @@ namespace MineSnake
 				MessageBox.Show("Unable to write to file");
             }
 		}
-
-        private void pictureBox91_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -2509,8 +2501,7 @@ namespace MineSnake
 
         private void Level1_FormClosed(object sender, FormClosedEventArgs e)
         {
-			Form1 form1 = new Form1();
-			form1.Show();
+            form.Show();
         }
     }
 }

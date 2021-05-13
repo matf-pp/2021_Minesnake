@@ -16,14 +16,15 @@ namespace MineSnake
 		private PictureBox[] pBoxes = new PictureBox[169];
 		private bool[] visited = new bool[169];
 		private MSManager game = new MSManager();
+        Form1 form;
 
-		public Level6(string name)
-		{
-			InitializeComponent();
-			this.name = name;
-		}
+        public Level6(string name, Form1 f)
+        {
+            InitializeComponent();
+            this.name = name;
+        }
 
-		private void Level6_Load(object sender, EventArgs e)
+        private void Level6_Load(object sender, EventArgs e)
 		{
 			label3.Text = name;
 
@@ -258,16 +259,6 @@ namespace MineSnake
 			}
 		}
 
-		private void pictureBox91_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void button2_Click(object sender, EventArgs e)
 		{
 			var result = MessageBox.Show("Are you sure you want to exit game?", "", MessageBoxButtons.YesNo,
@@ -391,11 +382,6 @@ namespace MineSnake
 			}
 		}
 
-		private void pictureBox5_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -463,11 +449,6 @@ namespace MineSnake
 			{
 				MessageBox.Show("YOU LOSE :("); updateFileContent(); 
 			}
-		}
-
-		private void pictureBox8_Click(object sender, EventArgs e)
-		{
-
 		}
 
 		private void pictureBox8_MouseDown(object sender, MouseEventArgs e)
@@ -3378,36 +3359,6 @@ namespace MineSnake
 			}
 		}
 
-        private void pictureBox135_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox136_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox137_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox138_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox139_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox140_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox135_MouseDown(object sender, MouseEventArgs e)
         {
 			if (e.Button == MouseButtons.Left)
@@ -3891,7 +3842,7 @@ namespace MineSnake
 			}
 		}
 
-        private void label2_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox156_MouseDown(object sender, MouseEventArgs e)
         {
 			if (e.Button == MouseButtons.Left)
 			{
@@ -4215,9 +4166,8 @@ namespace MineSnake
 
         private void Level6_FormClosed(object sender, FormClosedEventArgs e)
         {
-			Form1 form1 = new Form1();
-			form1.Show();
-		}
+            form.Show();
+        }
     }
 }
 

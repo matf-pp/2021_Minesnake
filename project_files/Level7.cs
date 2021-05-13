@@ -16,14 +16,15 @@ namespace MineSnake
 		private PictureBox[] pBoxes = new PictureBox[169];
 		private bool[] visited = new bool[169];
 		private MSManager game = new MSManager();
+        Form1 form;
 
-		public Level7(string name)
-		{
-			InitializeComponent();
-			this.name = name;
-		}
+        public Level7(string name, Form1 f)
+        {
+            InitializeComponent();
+            this.name = name;
+        }
 
-		private void Level7_Load(object sender, EventArgs e)
+        private void Level7_Load(object sender, EventArgs e)
 		{
 			label3.Text = name;
 
@@ -256,16 +257,6 @@ namespace MineSnake
 			{
 				MessageBox.Show("Unable to write to file");
 			}
-		}
-
-		private void pictureBox91_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -3370,42 +3361,12 @@ namespace MineSnake
 			int result = game.checkResult();
 			if (result == 0)
 			{
-				MessageBox.Show("YOU WIN. CONGRATS! :)"); updateFileContent(); 
+				MessageBox.Show("YOU WIN. CONGRATS! :)"); updateFileContent();
 			}
 			else if (result == -1)
 			{
-				MessageBox.Show("YOU LOSE :("); updateFileContent(); 
+				MessageBox.Show("YOU LOSE :("); updateFileContent();
 			}
-		}
-
-		private void pictureBox135_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox136_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox137_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox138_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox139_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBox140_Click(object sender, EventArgs e)
-		{
-
 		}
 
 		private void pictureBox135_MouseDown(object sender, MouseEventArgs e)
@@ -3891,7 +3852,7 @@ namespace MineSnake
 			}
 		}
 
-		private void label2_MouseDown(object sender, MouseEventArgs e)
+		private void pictureBox156_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
 			{
@@ -4215,9 +4176,8 @@ namespace MineSnake
 
         private void Level7_FormClosed(object sender, FormClosedEventArgs e)
         {
-			Form1 form1 = new Form1();
-			form1.Show();
-		}
+            form.Show();
+        }
     }
 }
 

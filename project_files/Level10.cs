@@ -16,14 +16,15 @@ namespace MineSnake
 		private PictureBox[] pBoxes = new PictureBox[169];
 		private bool[] visited = new bool[169];
 		private MSManager game = new MSManager();
+        Form1 form;
 
-		public Level10(string name)
-		{
-			InitializeComponent();
-			this.name = name;
-		}
+        public Level10(string name, Form1 f)
+        {
+            InitializeComponent();
+            this.name = name;
+        }
 
-		private void Level10_Load(object sender, EventArgs e)
+        private void Level10_Load(object sender, EventArgs e)
 		{
 			label3.Text = name;
 
@@ -3891,7 +3892,7 @@ namespace MineSnake
 			}
 		}
 
-		private void label2_MouseDown(object sender, MouseEventArgs e)
+		private void pictureBox156_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
 			{
@@ -4215,9 +4216,8 @@ namespace MineSnake
 
         private void Level10_FormClosed(object sender, FormClosedEventArgs e)
         {
-			Form1 form1 = new Form1();
-			form1.Show();
-		}
+            form.Show();
+        }
     }
 }
 

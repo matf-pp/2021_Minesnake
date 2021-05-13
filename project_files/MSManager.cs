@@ -483,6 +483,7 @@ namespace MineSnake
 
             if (mc)
             {
+                points += 5;
                 paint();
             }
         }

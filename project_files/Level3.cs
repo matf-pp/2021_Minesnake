@@ -12,10 +12,10 @@ namespace MineSnake
 {
 	public partial class Level3 : Form
 	{
-		private string name;
-		private PictureBox[] pBoxes = new PictureBox[100];
-		private bool[] visited = new bool[100];
-		private MSManager game = new MSManager();
+	private string name;
+	private PictureBox[] pBoxes = new PictureBox[100];
+	private bool[] visited = new bool[100];
+	private MSManager game = new MSManager();
         Form1 form;
 
         public Level3(string name, Form1 f)
@@ -169,7 +169,7 @@ namespace MineSnake
 				int j = 0;
 				foreach (Tuple<string, int> tmp in sortedList)
 				{
-					if (j == 5)
+					if (j == 10)
 						break;
 					fileContent.Add(tmp.Item1 + " " + tmp.Item2.ToString());
 					j++;

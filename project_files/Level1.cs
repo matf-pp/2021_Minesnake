@@ -17,12 +17,15 @@ namespace MineSnake
         private PictureBox[] pBoxes = new PictureBox[100];
 		private bool[] visited = new bool[100];
 		private MSManager game = new MSManager();
+		private Form1 form;
+		private bool updated = false;
 
-		public Level1(string name)
-        {
-            InitializeComponent();
-            this.name = name;
-        }
+		public Level1(string name, Form1 f)
+		{
+			InitializeComponent();
+			this.name = name;
+			form = f;
+		}
 
 		private void Level1_Load(object sender, EventArgs e)
 		{
@@ -149,6 +152,9 @@ namespace MineSnake
 		}
 		private void updateFileContent()
         {
+			if (updated)
+				return;
+
 			try
 			{
 				string[] lines = File.ReadAllLines("players.txt");
@@ -168,7 +174,7 @@ namespace MineSnake
 				int j = 0;
 				foreach (Tuple<string, int> tmp in sortedList)
 				{
-					if (j == 5)
+					if (j == 10)
 						break;
 					fileContent.Add(tmp.Item1 + " " + tmp.Item2.ToString());
 					j++;
@@ -177,11 +183,23 @@ namespace MineSnake
 			} catch(Exception) {
 				MessageBox.Show("Unable to write to file");
             }
+
+			updated = true;
 		}
+
+        private void pictureBox91_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-			var result = MessageBox.Show("Are you sure you want to exit game?", "", MessageBoxButtons.YesNo,
+			var result = MessageBox.Show("Are you sure you want to current level?", "", MessageBoxButtons.YesNo,
 				MessageBoxIcon.Information);
 			if (result == DialogResult.Yes)
 				this.Close();
@@ -2499,8 +2517,7 @@ namespace MineSnake
 
         private void Level1_FormClosed(object sender, FormClosedEventArgs e)
         {
-			Form1 form1 = new Form1();
-			form1.Show();
+			form.Show();
         }
     }
 }

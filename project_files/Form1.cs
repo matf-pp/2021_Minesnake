@@ -26,7 +26,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level1 level1 = new Level1(tmp);
+            Level1 level1 = new Level1(tmp, this);
             level1.Show();
         }
 
@@ -60,7 +60,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level2 level2 = new Level2(tmp);
+            Level2 level2 = new Level2(tmp, this);
             level2.Show();
         }
 
@@ -73,7 +73,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level3 level3 = new Level3(tmp);
+            Level3 level3 = new Level3(tmp, this);
             level3.Show();
         }
 
@@ -86,7 +86,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level4 level4 = new Level4(tmp);
+            Level4 level4 = new Level4(tmp, this);
             level4.Show();
         }
 
@@ -99,7 +99,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level5 level5 = new Level5(tmp);
+            Level5 level5 = new Level5(tmp, this);
             level5.Show();
         }
 
@@ -112,7 +112,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level6 level6 = new Level6(tmp);
+            Level6 level6 = new Level6(tmp, this);
             level6.Show();
         }
 
@@ -125,7 +125,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level7 level7 = new Level7(tmp);
+            Level7 level7 = new Level7(tmp, this);
             level7.Show();
         }
 
@@ -138,7 +138,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level8 level8 = new Level8(tmp);
+            Level8 level8 = new Level8(tmp, this);
             level8.Show();
         }
 
@@ -151,7 +151,7 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level9 level9 = new Level9(tmp);
+            Level9 level9 = new Level9(tmp, this);
             level9.Show();
         }
 
@@ -164,8 +164,9 @@ namespace MineSnake
                 return;
             }
             this.Hide();
-            Level10 level10 = new Level10(tmp);
+            Level10 level10 = new Level10(tmp, this);
             level10.Show();
         }
+
     }
 }

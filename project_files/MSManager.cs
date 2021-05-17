@@ -322,7 +322,7 @@ namespace MineSnake
             visitedGrid = visGr;
             visitedGrid[width*startX + startY] = true;
             timer = new MSTimer(10000 / snakeMovesPerTenSeconds);
-            Action f = () => { snake.move(1); paint(); };
+            Action f = () => { snake.move(1); paint(); points--; };
             timer.setFunction(f);
             Action<MSException> ef = e => onRuntimeException(e);
             timer.setErrorFunction(ef);
@@ -483,6 +483,7 @@ namespace MineSnake
 
             if (mc)
             {
+                points += 5;
                 paint();
             }
         }
@@ -509,7 +510,7 @@ namespace MineSnake
 
             visitedGrid[width*x + y] = true;
             removeAndRefresh(x, y);
-            points += 5;
+            points += 15;
             paint();
         }
 
@@ -539,7 +540,6 @@ namespace MineSnake
             {
                 grid.removeProperty(x, y, MSTileProperty.MINE);
                 minesLeft--;
-                points += 10;
 
                 if (grid.isIncluded(x - 1, y - 1))
                 {

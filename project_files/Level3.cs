@@ -12,19 +12,21 @@ namespace MineSnake
 {
 	public partial class Level3 : Form
 	{
-	private string name;
-	private PictureBox[] pBoxes = new PictureBox[100];
-	private bool[] visited = new bool[100];
-	private MSManager game = new MSManager();
-        Form1 form;
+		private string name;
+		private PictureBox[] pBoxes = new PictureBox[100];
+		private bool[] visited = new bool[100];
+		private MSManager game = new MSManager();
+		private Form1 form;
+		private bool updated = false;
 
-        public Level3(string name, Form1 f)
-        {
-            InitializeComponent();
-            this.name = name;
-        }
+		public Level3(string name, Form1 f)
+		{
+			InitializeComponent();
+			this.name = name;
+			form = f;
+		}
 
-            private void Level3_Load(object sender, EventArgs e)
+		private void Level3_Load(object sender, EventArgs e)
 		{
 			label3.Text = name;
 
@@ -150,6 +152,8 @@ namespace MineSnake
 
 		private void updateFileContent()
 		{
+			if (updated)
+				return;
 			try
 			{
 				string[] lines = System.IO.File.ReadAllLines("players.txt");
@@ -180,11 +184,23 @@ namespace MineSnake
 			{
 				MessageBox.Show("Unable to write to file");
 			}
+
+			updated = true;
+		}
+
+		private void pictureBox91_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			var result = MessageBox.Show("Are you sure you want to exit game?", "", MessageBoxButtons.YesNo,
+			var result = MessageBox.Show("Are you sure you want to exit current level?", "", MessageBoxButtons.YesNo,
 				MessageBoxIcon.Information);
 			if (result == DialogResult.Yes)
 				this.Close();
@@ -303,6 +319,11 @@ namespace MineSnake
 			{
 				MessageBox.Show("YOU LOSE :("); updateFileContent(); 
 			}
+		}
+
+		private void pictureBox5_Click(object sender, EventArgs e)
+		{
+
 		}
 
 		private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
@@ -2497,8 +2518,8 @@ namespace MineSnake
 
         private void Level3_FormClosed(object sender, FormClosedEventArgs e)
         {
-            form.Show();
-        }
+			form.Show();
+		}
     }
 }
 

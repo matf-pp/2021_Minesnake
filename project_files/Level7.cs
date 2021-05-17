@@ -12,19 +12,21 @@ namespace MineSnake
 {
 	public partial class Level7 : Form
 	{
-	private string name;
-	private PictureBox[] pBoxes = new PictureBox[169];
-	private bool[] visited = new bool[169];
-	private MSManager game = new MSManager();
-        Form1 form;
+		private string name;
+		private PictureBox[] pBoxes = new PictureBox[169];
+		private bool[] visited = new bool[169];
+		private MSManager game = new MSManager();
+		private Form1 form;
+		private bool updated = false;
 
-        public Level7(string name, Form1 f)
-        {
-            InitializeComponent();
-            this.name = name;
-        }
+		public Level7(string name, Form1 f)
+		{
+			InitializeComponent();
+			this.name = name;
+			form = f;
+		}
 
-        private void Level7_Load(object sender, EventArgs e)
+		private void Level7_Load(object sender, EventArgs e)
 		{
 			label3.Text = name;
 
@@ -227,6 +229,9 @@ namespace MineSnake
 
 		private void updateFileContent()
 		{
+			if (updated)
+				return;
+
 			try
 			{
 				string[] lines = System.IO.File.ReadAllLines("players.txt");
@@ -257,11 +262,23 @@ namespace MineSnake
 			{
 				MessageBox.Show("Unable to write to file");
 			}
+
+			updated = true;
+		}
+
+		private void pictureBox91_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			var result = MessageBox.Show("Are you sure you want to exit game?", "", MessageBoxButtons.YesNo,
+			var result = MessageBox.Show("Are you sure you want to exit current level?", "", MessageBoxButtons.YesNo,
 				MessageBoxIcon.Information);
 			if (result == DialogResult.Yes)
 				this.Close();
@@ -3361,12 +3378,42 @@ namespace MineSnake
 			int result = game.checkResult();
 			if (result == 0)
 			{
-				MessageBox.Show("YOU WIN. CONGRATS! :)"); updateFileContent();
+				MessageBox.Show("YOU WIN. CONGRATS! :)"); updateFileContent(); 
 			}
 			else if (result == -1)
 			{
-				MessageBox.Show("YOU LOSE :("); updateFileContent();
+				MessageBox.Show("YOU LOSE :("); updateFileContent(); 
 			}
+		}
+
+		private void pictureBox135_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox136_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox137_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox138_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox139_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox140_Click(object sender, EventArgs e)
+		{
+
 		}
 
 		private void pictureBox135_MouseDown(object sender, MouseEventArgs e)
@@ -4176,8 +4223,8 @@ namespace MineSnake
 
         private void Level7_FormClosed(object sender, FormClosedEventArgs e)
         {
-            form.Show();
-        }
+			form.Show();
+		}
     }
 }
 

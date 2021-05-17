@@ -24,7 +24,7 @@ Green - fields where the snake is located.
 
 <p align="center"> <h1 style="font-size:30px;"> Application instructions and technical details </h1> </p>
 <p align="left">
-<img width="800" height="500" src="/project_files/pictures/photo.png"> 
+<img width="800" height="480" src="/project_files/pictures/photo.png"> 
  </p>
  
  On the picture above you can see our front page.

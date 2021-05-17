@@ -31,7 +31,7 @@ Green - fields where the snake is located.
  
 -Before you run a level, you need to enter your name;
 
--On the rang list button, you will get a list of top five players;
+-On the rang list button, you will get a list of top ten players;
 
 -Click help, for a game introduction.
 
